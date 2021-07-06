@@ -1,0 +1,49 @@
+.menuItem {
+    display: inline;
+    padding: 0px 8px;
+    color: #00b5e4;
+    cursor: pointer;
+    font-size: larger;
+    justify-self: center;
+    /* border: 1px solid red; */
+  }
+  
+  .navContainer {
+    /* border: 1px solid blue; */
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    /* align-self: center; */
+  }
+  
+  /*defined classes from gatsby*/
+  .root {
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+  }
+  
+  .primary-navigation-link {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  
+  .primary-navigation-link:first-child {
+    margin-left: 32px;
+  }
+  .nav-links__primary-item .nav-links__primary-link {
+    position: relative;
+    display: flex;
+    padding: 15px 50px 15px 20px;
+    height: 100%;
+    font-family: GE Inspira Sans, sans-serif;
+    font-size: 1.125rem;
+    align-items: center;
+    z-index: 1;
+    -webkit-transition: color 0.35s ease-in-out;
+    transition: color 0.35s ease-in-out;
+    color: #00b5e2;
+  }
+  
