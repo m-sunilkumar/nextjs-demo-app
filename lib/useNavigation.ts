@@ -23,8 +23,8 @@ function linkToPage(
   switch (pageType) {
     case PageContentTypes.homePage: {
       return {
-        href: withPreviewParam("/[locale]/articles/[slug]", isPreview),
-        as: withPreviewParam(`/${locale}/articles/${slug}`, isPreview),
+        href: withPreviewParam("/[locale]/products/[slug]", isPreview),
+        as: withPreviewParam(`/${locale}/products/${slug}`, isPreview),
       };
     }
 
@@ -34,7 +34,12 @@ function linkToPage(
         as: withPreviewParam(`/${locale}/${slug}`, isPreview),
       };
     }
-
+    case PageContentTypes.testPage: {
+      return {
+        href: withPreviewParam(`/[locale]/test-page`, isPreview),
+        as: withPreviewParam(`/${locale}/test-page`, isPreview),
+      };
+    }
     default: {
       throw new Error("Page type is not supported yet");
     }

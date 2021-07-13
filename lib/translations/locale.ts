@@ -1,4 +1,9 @@
-import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
+import {
+  GetServerSidePropsContext,
+  GetServerSidePropsResult,
+  GetStaticPropsContext,
+  GetStaticPropsResult,
+} from "next";
 
 export type Locale = string;
 // cheap trick
@@ -34,6 +39,29 @@ export const getLocale = (
   const actualLocale = findLocale(String(locale));
 
   return actualLocale ?? UnknownLocale;
+};
+
+export const withStaticLocale = (
+  fn: (
+    locale: Locale,
+    context: GetStaticPropsContext
+  ) => Promise<GetStaticPropsResult<Record<string, unknown>>>
+) => {
+  return (context: GetStaticPropsContext) => {
+    console.log("context", context);
+    const locale = getLocale(context.params.locale);
+
+    switch (locale) {
+      case UnknownLocale:
+        // context.writeHead(302, { Location: "/" }).end();
+        break;
+      case undefined:
+        // context.statusCode = 404;
+        break;
+      default:
+        return fn(locale, context);
+    }
+  };
 };
 
 export const withLocale = (

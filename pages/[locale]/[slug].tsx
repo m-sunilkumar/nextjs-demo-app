@@ -44,7 +44,6 @@ export const getServerSideProps = withLocale(
       locale,
       pageContentType: PageContentTypes.homePage,
     });
-    console.log("preview,page", preview, page.fields.content.fields);
     const response = await fetchContent(`
     {
         navbarCollection {

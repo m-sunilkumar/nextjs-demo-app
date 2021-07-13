@@ -13,6 +13,7 @@ export const ComponentContentTypes = {
 export const PageContentTypes = {
   LandingPage: "page_landing",
   homePage: "pageHomePage",
+  testPage:"pageTestPage"
 };
 
 export const fallbackImage = {

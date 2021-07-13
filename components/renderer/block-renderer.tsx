@@ -8,6 +8,7 @@ import { Image } from "./image";
 import { Video } from "./video";
 import { Section } from "./section";
 import { HomePage } from "./homePage";
+import { TestPage } from "./testPage";
 import {
   PageContentTypes,
   ComponentContentTypes,
@@ -54,6 +55,7 @@ const ContentTypeMap = {
   [ComponentContentTypes.Hero]: Hero,
   [ComponentContentTypes.Section]: Section,
   [PageContentTypes.homePage]: HomePage,
+  [PageContentTypes.testPage]: TestPage,
   [PageContentType]: fromPage("content"),
   [ComponentContentTypes.Text]: Text,
   [ComponentContentTypes.Image]: Image,
