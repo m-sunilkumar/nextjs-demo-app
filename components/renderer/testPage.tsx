@@ -5,7 +5,7 @@ import { isRichText, renderRichText } from "lib/rich-text/render";
 import { TypePage, TypePage_help_center_article } from "lib/types";
 import { Link } from "components/link";
 import homePageStyles from "./homePage.module.css";
-import FeatureBannerImage from "@mwa/component-library/dist/Components/FeatureBanner";
+// import FeatureBannerImage from "@mwa/component-library/dist/Components/FeatureBanner";
 
 type TestPageProps = TypePage_help_center_article & {
   parent: TypePage;
@@ -25,9 +25,7 @@ export const TestPage = ({ fields, parent }: TestPageProps) => {
             <h1 className="title-font text-lg font-medium text-gray-900 mb-2">
               {parent.fields.title}
             </h1>
-            <div>
-              <FeatureBannerImage {...fields} />
-            </div>
+            <div>{/* <FeatureBannerImage {...fields} /> */}</div>
             <p className="leading-relaxed">
               {isRichText(fields.content)
                 ? renderRichText(fields.content)

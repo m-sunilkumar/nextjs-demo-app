@@ -44,6 +44,7 @@ export const getServerSideProps = withLocale(
       locale,
       pageContentType: PageContentTypes.homePage,
     });
+    console.log("server side options.......", locale, query, preview);
     const response = await fetchContent(`
     {
         navbarCollection {
